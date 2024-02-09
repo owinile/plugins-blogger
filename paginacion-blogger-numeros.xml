@@ -1,0 +1,8 @@
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
+<!-- Start XOmisse Pagination -->
+<script type='text/javascript'> //<![CDATA[ /** Compartido por XOmisse **/
+var postperpage=3; var numshowpage=4; var prevpage ='Previous'; var nextpage ='Next'; var urlactivepage=location.href; var home_page="/";
+//]]> </script>
+<script src='https://cdn.jsdelivr.net/gh/owinile/plugins-blogger@main/pagination-blogger.js' type='text/javascript'/>
+<!-- End XOmisse Pagination -->
+</b:if>
