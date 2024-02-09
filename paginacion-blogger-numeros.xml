@@ -1,8 +1,41 @@
+
+ESTILOS COLOCAR ANTES DEL ]]></b:skin>
+
+/* Start Paginacion - Custom CSS */
+#blog-pager, .blog-pager {
+display:block;
+padding:5px 0;
+}
+.showpage a, .pagenumber a, .totalpages, .current {
+position: relative;
+display: inline-block;
+padding: 5px 10px;
+margin: 0 2px;
+background: #ffffff;
+color: #333;
+border: 1px solid #f2f2f2;
+font-size: 12px;
+border-radius: 2px;
+transition: all .3s;
+} 
+
+.showpage a:hover, .pagenumber a:hover, .current {
+background: #333333;
+color: #ffffff;
+text-decoration:none;
+}
+/* Fin Paginacion */
+
+
+
+
+COLOCAR ANTES DEL </body>
+
 <b:if cond='data:blog.pageType == &quot;index&quot;'>
-<!-- Start XOmisse Pagination -->
-<script type='text/javascript'> //<![CDATA[ /** Compartido por XOmisse **/
+<!-- Start Pagination -->
+<script type='text/javascript'> //<![CDATA[ /** Start Pagination **/
 var postperpage=3; var numshowpage=4; var prevpage ='Previous'; var nextpage ='Next'; var urlactivepage=location.href; var home_page="/";
 //]]> </script>
 <script src='https://cdn.jsdelivr.net/gh/owinile/plugins-blogger@main/pagination-blogger.js' type='text/javascript'/>
-<!-- End XOmisse Pagination -->
+<!-- End Pagination -->
 </b:if>
