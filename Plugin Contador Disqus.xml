@@ -3,7 +3,7 @@ Plugin Contador Disqus
 Colocar donde deseas que muestre el contador disqus.
 
 <a expr:href='data:post.url +  &quot;#disqus_thread&quot;'> Comentários</a> <b:if cond='data:post.numberOfComments != 0'> 
-(+<data:post.numberOfComments/>)</b:if></a>
+(+<data:post.numberOfComments/>)</b:if>
 
 Colocar antes del </body>
 <!-- Plugin Contador Disqus :: Gracias Owinile Njalo (https://blogspot.owinile.com) -->
