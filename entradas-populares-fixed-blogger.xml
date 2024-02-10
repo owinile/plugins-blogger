@@ -8,18 +8,17 @@
            <!-- Agregar Estilos Css -->         
             <b:loop values='data:posts' var='post'>
 										
-											<hr/> <!-- separador -->
+		<hr/> <!-- separador -->
 
-											<!-- Image -->
-											<img class='agregar-estilos' expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 97, &quot;1:1&quot;)'/>
+		<!-- Image -->
+		<img class='agregar-estilos' expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 97, &quot;1:1&quot;)'/>
                                            
-
-											<!-- Text -->
-											 <div class='agregar-estilos'>
-                                               	<div class='agregar-estilos'><data:post.date/></div>
-												<a class='agregar-estilos' expr:href='data:post.url'><data:post.title/></a>
-												<p><a class='agregar-estilos' expr:href='data:post.url +  &quot;#disqus_thread&quot;'>Comentarios</a></p>
-											</div>
+<!-- Text -->
+		<div class='agregar-estilos'>
+                  <div class='agregar-estilos'><data:post.date/></div>
+			<p><a class='agregar-estilos' expr:href='data:post.url'><data:post.title/></a></p>
+			<a class='agregar-estilos' expr:href='data:post.url +  &quot;#disqus_thread&quot;'>Comentarios</a>
+			</div>
            
            </b:loop>
 	
