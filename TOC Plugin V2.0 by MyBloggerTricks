@@ -1,0 +1,73 @@
+Iniciar sesión Blogger > Plantilla
+Copia de seguridad de tu plantilla
+Haga clic en " Editar HTML "
+1. Justo encima </head>de la etiqueta, pegue los siguientes enlaces de origen:
+
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
+<script type='text/javascript'> 
+//<![CDATA[ 
+//*************TOC Plugin V2.0 by MyBloggerTricks.com shared and by Blogspot.owinile.com 
+function mbtTOC2(){var a=1,b=0,c="";document.getElementById("post-toc").innerHTML=document.getElementById("post-toc").innerHTML.replace(/<h([\d]).*?>(.*?)<\/h([\d]).*?>/gi,function(d,e,f,g){return e!=g?d:(e>a?c+=new Array(e-a+1).join("<ol class='point"+a+"'>"):e<a&&(c+=new Array(a-e+1).join("</ol></li>")),b+=1,c+='<li><a href="#point'+b+'">'+f+"</a>",a=parseInt(e),"<h"+e+" id='point"+b+"'>"+f+"</h"+g+">")}),a&&(c+=new Array(a+1).join("</ol>")),document.getElementById("mbtTOC2").innerHTML+=c}function mbtToggle2(){var a=document.getElementById("mbtTOC2"),b=document.getElementById("Tog");"none"===a.style.display?(a.style.display="block",b.innerHTML="hide"):(a.style.display="none",b.innerHTML="show")} 
+//]]> 
+</script>
+
+2. Luego busque ]]></b:skin>y justo encima pegue el siguiente código CSS:
+
+/*####TOC Plugin V2.0 by MyBloggerTricks and by Blogspot.owinile.com ####*/
+.mbtTOC2{border:5px solid #f7f0b8;box-shadow:1px 1px 0 #EDE396;background-color:#FFFFE0;color:#707037;line-height:1.4em;margin:30px auto;padding:20px 30px 20px 10px; font-family:Oswald, arial;display: block;width: 70%;}.mbtTOC2 button{background:#FFFFE0; font-family:oswald, arial; font-size:22px;position:relative; outline:none;border:none; color:#707037;padding:0 0 0 15px;}.mbtTOC2 button a {color:#0080ff; padding:0px 2px;cursor:pointer;} 
+.mbtTOC2 button a:hover{ text-decoration:underline; } 
+.mbtTOC2 button span {font-size:15px; margin:0px 10px; }
+
+.mbtTOC2 li{margin:10px 0;  } 
+.mbtTOC2 li a {color:#0080ff; text-decoration:none; font-size:18px; text-transform:capitalize;} 
+.mbtTOC2 li a:hover {text-decoration: underline;}.mbtTOC2 li li {margin:4px 0px;} 
+.mbtTOC2 li li a{ color:#289728; font-size:15px;}
+
+.mbtTOC2 ol{counter-reset:section1;list-style:none}
+.mbtTOC2 ol ol{counter-reset:section2}
+.mbtTOC2 ol ol ol{counter-reset:section3}
+.mbtTOC2 ol ol ol ol{counter-reset:section4}
+.mbtTOC2 ol ol ol ol ol{counter-reset:section5}
+.mbtTOC2 li:before{content:counter(section1);counter-increment:section1;position:relative;padding:0 8px 0 0;font-size:18px}
+.mbtTOC2 li li:before{content:counter(section1) "." counter(section2);counter-increment:section2;font-size:14px}
+.mbtTOC2 li li li:before{content:counter(section1) "."counter(section2) "." counter(section3);counter-increment:section3}
+.mbtTOC2 li li li li:before{content:counter(section1) "."counter(section2) "."counter(section3) "." counter(section4);counter-increment:section4}
+.mbtTOC2 li li li li li:before{content:counter(section1) "."counter(section2) "."counter(section3) "." counter(section4)"." counter(section5);counter-increment:section5}
+/* 
+.point2 {list-style-type:lower-alpha} 
+.point3 {list-style-type:lower-roman} 
+.point4 {list-style-type:disc} 
+*/
+
+Realice estos cambios personalizados si lo desea:
+
+Para cambiar el color de fondo del cuadro contenedor, edite #FFFFE0
+Para cambiar el color del borde del cuadro, edite #f7f0b8
+Para cambiar el color de fuente del texto del título, edite #707037
+Para cambiar el color del enlace de anclaje, edite #0080ff
+Para cambiar el color del cursor al pasar el enlace, edite #289728
+Si desea mostrar el estilo de lista alfanumérico y romano, 
+elimine el fragmento de código resaltado en verde y también las dos líneas resaltadas en amarillo. 
+Esto eliminará la lista numerada anidada y la reemplazará con alfanumérica.
+
+
+4. Finalmente búsquelo <data:post.body/>y reemplácelo con el siguiente código:
+Nota : Encontrará este código dos o más veces dentro de su plantilla , 
+así que reemplace todas sus instancias con el código siguiente, especialmente la segunda aparición. 
+El complemento TOC no funcionará si lo reemplaza   solo una vez.<data:post.body/>
+
+<div id="post-toc"><data:post.body/></div>
+
+
+5. Es mejor mostrar TOC justo después del párrafo inicial o antes del primer encabezado de la publicación de su blog.
+Para hacer esto, cambie al modo " HTML " del editor de Blogger y luego pegue el siguiente código HTML justo antes del primer título.
+
+<div class="mbtTOC2"> 
+<button>Contents <span>[<a onclick="mbtToggle2()"  id="Tog">hide</a>]</span></button> 
+<div id="mbtTOC2"></div> 
+</div>
+
+6. Finalmente, es hora de invocar el complemento para que pueda generar automáticamente un TOC al cargar la página.
+Para hacer esto, pegue el siguiente código JS en la parte inferior de su editor de Blogger, donde termina su publicación:
+
+<script>mbtTOC2();</script>
