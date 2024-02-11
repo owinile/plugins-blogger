@@ -6,14 +6,14 @@ Haga clic en " Editar HTML "
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
 <script type='text/javascript'> 
 //<![CDATA[ 
-//*************TOC Plugin V2.0 by MyBloggerTricks.com shared and by Blogspot.owinile.com 
+//*************TOC Plugin V2.0 by MyBloggerTricks.com and shared by Blogspot.owinile.com 
 function mbtTOC2(){var a=1,b=0,c="";document.getElementById("post-toc").innerHTML=document.getElementById("post-toc").innerHTML.replace(/<h([\d]).*?>(.*?)<\/h([\d]).*?>/gi,function(d,e,f,g){return e!=g?d:(e>a?c+=new Array(e-a+1).join("<ol class='point"+a+"'>"):e<a&&(c+=new Array(a-e+1).join("</ol></li>")),b+=1,c+='<li><a href="#point'+b+'">'+f+"</a>",a=parseInt(e),"<h"+e+" id='point"+b+"'>"+f+"</h"+g+">")}),a&&(c+=new Array(a+1).join("</ol>")),document.getElementById("mbtTOC2").innerHTML+=c}function mbtToggle2(){var a=document.getElementById("mbtTOC2"),b=document.getElementById("Tog");"none"===a.style.display?(a.style.display="block",b.innerHTML="Ocultar"):(a.style.display="none",b.innerHTML="Mostrar")} 
 //]]> 
 </script>
 
 2. Luego busque ]]></b:skin>y justo encima pegue el siguiente código CSS:
 
-/*####TOC Plugin V2.0 by MyBloggerTricks and by Blogspot.owinile.com ####*/
+/*####TOC Plugin V2.0 by MyBloggerTricks and shared by Blogspot.owinile.com ####*/
 .mbtTOC2{border:5px solid #f7f0b8;box-shadow:1px 1px 0 #EDE396;background-color:#FFFFE0;color:#707037;line-height:1.4em;margin:30px auto;padding:20px 30px 20px 10px; font-family:Oswald, arial;display: block;width: 70%;}.mbtTOC2 button{background:#FFFFE0; font-family:oswald, arial; font-size:22px;position:relative; outline:none;border:none; color:#707037;padding:0 0 0 15px;}.mbtTOC2 button a {color:#0080ff; padding:0px 2px;cursor:pointer;} 
 .mbtTOC2 button a:hover{ text-decoration:underline; } 
 .mbtTOC2 button span {font-size:15px; margin:0px 10px; }
