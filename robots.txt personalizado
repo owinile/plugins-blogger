@@ -1,0 +1,10 @@
+# Archivo robots.txt personalizado | blogspot.owinile.com
+
+User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: *
+Disallow: /search
+Allow: /
+
+Sitemap: URL-TU-BLOG-AQUÍ/sitemap.xml
