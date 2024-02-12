@@ -1,5 +1,26 @@
+//// FEED DE BLOGGER ////
+
 Cómo compartir todo el contenido
 Importante: En estas URL, debes reemplazar blogname por la dirección de tu blog.
 
 Atom 1.0: http://blogname.blogspot.com/feeds/posts/default
 RSS 2.0: http://blogname.blogspot.com/feeds/posts/default?alt=rss
+
+Si quieres recibir un feed de una etiqueta en particular, cambia la opción [label].
+
+Atom 1.0: http://blogname.blogspot.com/feeds/posts/default/-/[label]
+RSS 2.0: http://blogname.blogspot.com/feeds/posts/default/-/[label]?alt=rss
+
+Importante: En estas URL, debes reemplazar blogname por la dirección de tu blog y label 
+por la etiqueta que quieras usar para compartir
+
+Cómo compartir los comentarios por entrada
+Importante: En estas URL, si quieres recibir un feed de comentarios de una entrada, 
+debes reemplazar blogname por la dirección de tu blog y postID por la ID correcta de la entrada. 
+
+Atom 1.0: http://blogname.blogspot.com/feeds/<postId>/comments/default
+RSS 2.0: http://blogname.blogspot.com/feeds/postId/comments/default?alt=rss
+
+Si quieres recibir un feed de los comentarios de una entrada, 
+reemplaza postID por la ID correcta de tu entrada.
+
