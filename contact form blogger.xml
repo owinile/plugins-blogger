@@ -1,0 +1,108 @@
+<style>
+/* Crea un formulario en formspree.io y obtén el identificador. 
+Este código deberás pegarlo en una nueva página estática reemplazando YourID. 
+Contact form shared by Owinile Njalo (Blogspot.owinile.com) 
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Borrar flotadores tras las columnas */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Diseño adaptable - cuando la pantalla tenga menos de 600px de ancho, 
+hace que las dos columnas se apilen una encima de la otra en lugar de una al lado de la otra */
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+
+<div class="container">
+  <form action="https://formspree.io/f/YourID" method="POST">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Nombre Completo</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id=" "  name="name" placeholder="Ingresa tu nombre.." required="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Correo electrónico</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="email"  name="email" placeholder="Ingresa tu e-mail.." required="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Mensaje</label>
+    </div>
+    <div class="col-75">
+      <textarea id=" " name="Message" placeholder="Escribe tu mensaje aquí.." style="height:200px" required=""></textarea>
+    </div>
+  </div>
+   <div class="row"> 
+      <div class="col-25">
+      <label for="lname">Política de datos</label>
+    </div>
+    <div class="col-75" data-component="checkbox">
+                        <input type="checkbox" class="form-checkbox validate[required]" id="RPGD" name="RPGD" value="He leído y estoy de acuerdo con la Política de Privacidad" required="">
+                        <label id=" " for="RPGD"> He leído y estoy de acuerdo con la <a href="./p/politica-de-privacidad.html">Política de Privacidad</a></label>
+    </div>    
+   </div>     
+  <div class="row">
+    <input type="submit" value="Enviar Ahora">
+  </div>
+  </form>
+</div>
