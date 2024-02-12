@@ -1,0 +1,22 @@
+
+            <h1>Titulo con la palabra clave principal al inicio</h1>
+			<img src ="palabra-clave.jpg" alt="palabra clave semantica"/>
+            <h2>Subtitulo con la palabra clave secundaria</h2>
+            <p>Primer parrafo atacando a la palabra clave principal</p>
+            <h2>Otra plabra clave secundaria</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/pjxwR6FD9gA?si=SFfLgQ8GbjLlvll-&amp;controls=0"
+			title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen></iframe>
+            <p>Otro parrafo atacando a la palabra clave sencundaria o semantica</p>
+			<p>Otro parrafo atacando a la <a href="url-palabra-clave">palabra clave sencundaria o semantica</a></p>
+            <h3>Palabra clave semantica</h3>
+            <p>Otro parrafo atacando a la palabra clave sencundaria o semantica</p>    
+		    <h3>Palabra clave semantica</h3>
+            <p>Otro parrafo atacando a la palabra clave sencundaria o semantica</p> 
+            <h3>Palabra clave semantica</h3>
+            <p>Otro parrafo atacando a la palabra clave sencundaria o semantica</p> 
+			<h3>Llamada a la acción</h3>
+            <p>Texto orientado a la suscripcion o alguna acción especifica.</p> 
+			  
+            
