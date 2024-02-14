@@ -1,7 +1,0 @@
-Incluir todo el contenido de includable.xml dentro de un widget tipo "Blog", posteriormente, utilizar la siguiente etiqueta para incrustar los post relacionados donde se desee:
-
-<b:include name='postRelated-wjs'/>
-
-Consejo: Puede evitar la carga de post relacionados dentro de la vista previa ya que no se requiere, para ello agregue una condición:
-
-<b:include cond='!data:view.isPreview' name='postRelated-wjs'/>
