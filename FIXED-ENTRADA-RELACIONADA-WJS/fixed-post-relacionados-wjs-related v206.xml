@@ -1,0 +1,108 @@
+<b:includable data='post' id='post-related'>
+      
+      
+      <!-- AGREGAR ESTILOS DEL THEME -->
+			
+
+      <div class='wjs-related' id='wjs-related'/>
+   <script>
+   /*!
+    * wjs-related v2.0.6
+    * Copyright 2018 zkreations
+    * Developed by José Gregorio (fb.com/JGMateran)
+	* shared by Owinile Njalo (Blogspot.owinile.com)
+    * Licensed under MIT (github.com/zkreations/wjs-related/blob/master/LICENSE)
+    */
+   var related = (function(){
+   &#39;use strict&#39;;
+   
+   //Configuracion
+   var defaults = {
+      id: &#39;<data:post.id/>&#39;,
+      homepage: window.location.protocol + &#39;//&#39; + window.location.hostname,
+      image: &#39;src/imgdefault.jpg&#39;, //Imagen por defecto
+      length: 4, //Cantidad de entradas
+      localeDate: &#39;es-ES&#39;, //Idioma
+      snippet: 100, //Cantidad de texto
+      imgSize: &#39;w450-h270-c&#39;, //Recorte de la imagen
+      container: document.getElementById(&#39;wjs-related&#39;),
+      tags: [<b:loop values='data:post.labels' var='label'>&#39;<data:label.name/>&#39;,</b:loop>]
+   };
+   
+   //<![CDATA[
+   var tags$length = defaults.tags.length;
+   var script = document.createElement( 'script' );
+   var src = defaults.homepage + '/feeds/posts/default' +
+      '?alt=json-in-script' +
+      '&callback=related' +
+      '&max-results=' + ( defaults.length + 1 ) +
+      '&q=';
+   for ( var n = 0; n < tags$length; n++ ){
+      src += 'label:"' + defaults.tags[ n ] + '"' + ( n === tags$length - 1 ? '' : '|' );
+   }
+   script.src = src;
+   document.body.appendChild( script );
+   function render( data ){
+      var title = data.title.$t;
+	  var content = data.content;
+      var summary = data.summary;
+      var body = content ? content.$t : summary.$t;
+      var snippet = (body).replace(/<[^>]*>?/g,'').substring( 0, defaults.snippet ) + '...';
+      var img = data.media$thumbnail;
+      var tempHtml = document.createElement('div');
+
+    if (data.category) {
+      var labels = data.category.map(function(element) {
+      return  element.term;
+      });
+    }
+    
+    var getlabel = labels[0];
+    
+      
+      tempHtml.innerHTML = body;
+      var imgHtml = tempHtml.querySelector('img');
+      var image = ( img ? img.url : (imgHtml ? imgHtml.src : defaults.image)).replace( /s\B\d{2,4}-c/, defaults.imgSize); 
+      var url = (function(){
+         for ( var i = 0; i < data.link.length; i++ ){
+            var link = data.link[i];
+            if ( link.rel === 'alternate' ){
+               return link.href;
+            }
+         }
+      })();
+      var published = new Date( data.published.$t ).toLocaleDateString(
+         defaults.localeDate,
+         {year:'numeric', month:'long', day: 'numeric'}
+      );
+      return (
+         '<div class="col-sm-6 col-lg-3">' + //CANBIAR ESTILOS DEL TEMA
+		 '<div class="slbox-2 text-center">' + //CAMBIAR ESTILOS DEL TEMA
+		 '<img style="border: 1px solid; color: #e2e2e2;" class="img-fluid" src="' + image + '" alt="' + title + '" />' + //CANBIAR ESTILOS DEL TEMA
+		 '<p><a href="' + url + '">' + title + "</a></p><h5 class='h5-lg'>" + getlabel + "</h5>" + //CANBIAR ESTILOS DEL TEMA
+		 "</div>" + //CANBIAR ESTILOS DEL TEMA
+		 "</div>"//CANBIAR ESTILOS DEL TEMA
+      );
+   }
+   function related( json ){
+      var i = 0;
+      var post;
+      var length = defaults.length;
+      for ( ; i < length && ( post = json.feed.entry[ i ] ); i++ ){
+         if ( defaults.id !== post.id.$t.split( '.post-' )[ 1 ] ){
+            defaults.container.innerHTML += render( post );
+         } else {
+            length++;
+         }
+      }
+   }
+   return related;
+   })();
+//]]></script>
+
+
+      
+      	  <!-- AGREGAR ESTILOS DEL THEME -->      
+      
+
+</b:includable>
