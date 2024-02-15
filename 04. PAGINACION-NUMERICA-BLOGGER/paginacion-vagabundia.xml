@@ -10,7 +10,7 @@
 </style> 
 <script type='text/javascript'>
 //<![CDATA[
-// https://blogspot.owinile.com
+// Shared by Owinle Njalo (Blogspot.owinile.com)
 //FIXED DOMINIO PROPIO CAMBIAR (var isFirstPage = thisUrl=="Dominio-propio";)
 function showpageCount(json) {
 var thisUrl = location.href;
