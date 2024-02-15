@@ -1,7 +1,9 @@
 
 ESTILOS COLOCAR ANTES DEL ]]></b:skin>
 
-/* Start Paginacion - Custom CSS */
+/* Start Paginacion - Custom CSS 
+Shared by Owinle Njalo (Blogspot.owinile.com) */
+
 #blog-pager, .blog-pager {
 display:block;
 padding:5px 0;
