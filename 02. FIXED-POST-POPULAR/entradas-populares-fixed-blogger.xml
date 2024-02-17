@@ -16,7 +16,7 @@
 <!-- Text -->
 		<div class='agregar-estilos'>
                   <div class='agregar-estilos'><data:post.date/></div>
-			<p><a class='agregar-estilos' expr:href='data:post.url'><data:post.title/></a></p>
+			<a class='agregar-estilos' expr:href='data:post.url'><data:post.title/></a>
 			<a class='agregar-estilos' expr:href='data:post.url +  &quot;#disqus_thread&quot;'>Comentarios</a>
 			</div>
            
