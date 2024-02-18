@@ -1,0 +1,63 @@
+/*!
+=> Crear y usar enlaces directos de Dropbox
+=> Author Canvas.xml : Zkreations
+=> URL:https://www.zkreations.com/2018/12/como-crear-enlaces-descarga-directa-dropbox.html
+=> Shared for blogger by: Owinile Njalo (https://blogspot.owinile.com)
+=> Youtube channel: https://www.youtube.com/channel/UCfhBgrQQXoFfv5IAYqHNrtg
+*/
+
+Usar Dropbox como hosting
+Siguiendo con la temática de los artículos en donde te enseño usar servicios de alojamiento gratuitos como hosting,
+ hoy te voy a explicar como obtener enlaces de descarga directa de Dropbox,
+ y también como representarlos.
+
+A diferencia de otros servicios,
+ Dropbox solo nos brinda 2GB gratis de almacenamiento,
+ ademas contamos con 20 GB de ancho de banda y un limite de 100.000 descargas por día,
+ aún así,
+ si buscas utilizarlo como hosting gratuito puede servir para archivos pequeños.
+
+Crear enlace de descarga directa
+Solo es necesario iniciar sesión y subir los archivos que quieras utilizar,
+ nada más. Para este tutorial he cargado dos que servirán de ejemplo,
+ por último pulsa el botón “Compartir” que aparece al posicionar el cursor:
+
+Dropbox como hosting
+Hasta este punto tendrás un enlace similar al siguiente:
+
+
+https://www.dropbox.com/s/abcdexxxxxx/skyline.mp3?dl=0
+Cambia el numero 0 que se encuentra al final por 1 quedando de la siguiente manera:
+
+
+https://www.dropbox.com/s/abcdexxxxxx/skyline.mp3?dl=1
+Eso es todo,
+
+ si visitas el enlace empezará una descarga directa. Se que parece muy fácil,
+ pero Dropbox en un principio permitía incluso alojar páginas webs,
+ una característica que se perdió con el tiempo,
+ aún asi,
+ obtener los archivos sigue resultando muy fácil.
+
+Representar archivos
+Si estas intentando utilizar los archivos para reproducir audios o videos,
+ notarás que no es posible (sobre todo en videos),
+ si deseas que los archivos multimedia se representen como tal,
+ vamos a cambiar lo siguiente:
+
+
+https://www.dropbox.com/s/abcdexxxxxx/skyline.mp3?dl=1
+Reemplaza dl=1 con raw=1 lo que dejará el enlace de la siguiente manera:
+
+
+https://www.dropbox.com/s/abcdexxxxxx/skyline.mp3?raw=1
+Usar los enlaces
+Estas alternativas pueden ser muy beneficiosas ya que nos ahorramos costos de alojamiento si queremos cargar una pequeña cantidad de archivos multimedia. 
+Aquí un ejemplo (usando el parámetro raw=1) del archivo de audio subido en este tutorial:
+
+Conclusión
+Dropbox es una alternativa más para alojar y usar archivos gratis en nuestro blog,
+ y aunque tiene limitaciones,
+ su facilidad para obtener los archivos puede servirnos en algún momento. Espero que este articulo te haya sido útil,
+ cualquier duda déjala en los comentarios. ¡Gracias por leer!.
+
