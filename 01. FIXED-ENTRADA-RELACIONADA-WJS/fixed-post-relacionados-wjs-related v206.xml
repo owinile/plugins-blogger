@@ -76,12 +76,12 @@
          {year:'numeric', month:'long', day: 'numeric'}
       );
       return (
-         '<div class="col-sm-6 col-lg-3">' + //CANBIAR ESTILOS DEL TEMA
+         '<div class="col-sm-6 col-lg-3">' + //CAMBIAR ESTILOS DEL TEMA
 		 '<div class="slbox-2 text-center">' + //CAMBIAR ESTILOS DEL TEMA
-		 '<img style="border: 1px solid; color: #e2e2e2;" class="img-fluid" src="' + image + '" alt="' + title + '" />' + //CANBIAR ESTILOS DEL TEMA
-		 '<p><a href="' + url + '">' + title + "</a></p><h5 class='h5-lg'>" + getlabel + "</h5>" + //CANBIAR ESTILOS DEL TEMA
-		 "</div>" + //CANBIAR ESTILOS DEL TEMA
-		 "</div>"//CANBIAR ESTILOS DEL TEMA
+		 '<img style="border: 1px solid; color: #e2e2e2;" class="img-fluid" src="' + image + '" alt="' + title + '" />' + //CAMBIAR ESTILOS DEL TEMA
+		 '<p><a href="' + url + '">' + title + "</a></p><h5 class='h5-lg'>" + getlabel + "</h5>" + //CAMBIAR ESTILOS DEL TEMA
+		 "</div>" + //CAMBIAR ESTILOS DEL TEMA
+		 "</div>"//CAMBIAR ESTILOS DEL TEMA
       );
    }
    function related( json ){
