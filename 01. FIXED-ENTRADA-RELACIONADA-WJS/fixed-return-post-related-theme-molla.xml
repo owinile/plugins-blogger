@@ -1,0 +1,17 @@
+'<div class="col-sm-6 col-lg-4">' + 
+'<article class="entry entry-grid">'+									
+'<figure class="entry-media">' + 
+'<a href="' + url + '">' + 
+'<img src="' + image + '" alt="' + title + '"/>' + 
+'</a>' + 
+'</figure>' + 
+'<div class="entry-body">' + 
+'<h2 class="entry-title">' + 
+'<a href="' + url + '">' + title + "</a>" + 
+'</h2>' + 
+'<div class="entry-cats">' + 
+'<div class="entry-cats">' + getlabel + "</div>" + 
+'</div>' + 
+'</div>'+
+'</article>'+
+'</div>'
